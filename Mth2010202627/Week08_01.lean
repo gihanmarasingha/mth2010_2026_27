@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace Mth2010202627.Week08_01
+
 /-
 # Properties of Rings
 -/
@@ -122,3 +124,5 @@ lemma neg_eq_neg_one_mul : -a = (-1) * a := by
   sorry
 
 end examples
+
+end Mth2010202627.Week08_01

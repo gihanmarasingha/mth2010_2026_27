@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace Mth2010202627.Week09_02
+
 /-
 # Formalisation of Coursework 3, MTH2010 2025
 -/
@@ -253,3 +255,5 @@ noncomputable def field_units_quotient_ring_units :
   exact QuotientGroup.quotientKerEquivOfSurjective v.valZ_hom v.range_eq
 
 end VFunc
+
+end Mth2010202627.Week09_02

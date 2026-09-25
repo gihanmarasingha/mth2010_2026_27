@@ -1,6 +1,8 @@
 import Mathlib.Algebra.Group.Pointwise.Finset.Basic
 import Mathlib.GroupTheory.Perm.Cycle.Concrete
 
+namespace Mth2010202627.Week03_01
+
 open scoped Pointwise
 open Finset
 
@@ -64,3 +66,5 @@ generates `S 5`?
 
 #min_imports
 #redundant_imports
+
+end Mth2010202627.Week03_01

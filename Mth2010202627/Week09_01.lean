@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace Mth2010202627.Week09_01
+
 variable {R} {S} {T} [CommRing R] [CommRing S] [CommRing T]
 
 namespace exercises
@@ -74,3 +76,5 @@ def comp_hom : R →+*T where
   map_add' := by sorry
 
 end exercises
+
+end Mth2010202627.Week09_01

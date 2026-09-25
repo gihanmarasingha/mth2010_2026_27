@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace Mth2010202627.Week10_01
+
 variable {R} [CommRing R]
 
 variable (I J : Ideal R)
@@ -111,6 +113,8 @@ example : Set.univ = sum_set I₁ I₂ := by
   sorry
 
 end principal_example
+
+end Mth2010202627.Week10_01
 
 /-
 ### Exercise

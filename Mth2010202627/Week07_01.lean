@@ -1,5 +1,7 @@
 import Mathlib
 
+namespace Mth2010202627.Week07_01
+
 /-
 # Permutation representations
 -/
@@ -122,3 +124,5 @@ def permRep : G →* Equiv.Perm A :=
     sorry
   map_mul' := by
     sorry }
+
+end Mth2010202627.Week07_01

@@ -9,7 +9,10 @@ In Mathlib, `Equiv.Perm (Fin n)` is the group of permutations on `{0, 1, ..., n 
 We abbreviate this to `S n`. It is essentially the same as the standard `Sₙ`.
 -/
 
+namespace Mth2010202627.Week01_01
+
 open Equiv
+open scoped commutatorElement
 
 /-- `S n` is the group of permutations on `{0, 1, 2, ..., n - 1}` -/
 abbrev S (n : Nat) := Perm (Fin n)
@@ -337,3 +340,5 @@ def expected : Finset (Perm (Fin 5)) :=
 
 #min_imports
 #redundant_imports
+
+end Mth2010202627.Week01_01
