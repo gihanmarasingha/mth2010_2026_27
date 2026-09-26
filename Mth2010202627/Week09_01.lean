@@ -1,4 +1,16 @@
-import Mathlib
+/-
+Copyright (c) 2026 Gihan Marasingha. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gihan Marasingha
+-/
+
+import Mathlib.Algebra.Ring.Subring.Defs
+import Mathlib.RingTheory.Ideal.Defs
+import Mathlib.Tactic.Ring
+
+/-!
+# Ideals
+-/
 
 namespace Mth2010202627.Week09_01
 

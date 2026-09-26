@@ -1,10 +1,18 @@
-import Mathlib
+/-
+Copyright (c) 2026 Gihan Marasingha. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gihan Marasingha
+-/
+
+import Mathlib.Algebra.Group.Basic
+import Mathlib.Algebra.Ring.Defs
+
+/-!
+# Properties of Rings
+-/
 
 namespace Mth2010202627.Week08_01
 
-/-
-# Properties of Rings
--/
 
 variable {R : Type*} [CommRing R]
 

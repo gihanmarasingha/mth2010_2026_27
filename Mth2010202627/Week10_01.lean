@@ -1,4 +1,14 @@
-import Mathlib
+/-
+Copyright (c) 2026 Gihan Marasingha. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gihan Marasingha
+-/
+
+import Mathlib.RingTheory.Ideal.Operations
+
+/-!
+Week 10 worksheet.
+-/
 
 namespace Mth2010202627.Week10_01
 
@@ -82,7 +92,7 @@ lemma one_in_I_sum : 1 ∈ sum_set I₁ I₂ := by
     norm_num
   show -3 ∈ I₂
   simp [I₂]
-  rw [Ideal.mem_span_singleton]
+  done
 
 /-
 ### Exercise
@@ -113,8 +123,6 @@ example : Set.univ = sum_set I₁ I₂ := by
   sorry
 
 end principal_example
-
-end Mth2010202627.Week10_01
 
 /-
 ### Exercise
@@ -164,10 +172,12 @@ Prove the following result that if an ideal `I` contains `1`, then it is the
 whole ring `R`. In Mathlib, this ideal is denoted `⊤`.
 -/
 
+
 lemma eq_univ_of_one_mem (h : 1 ∈ I) : ⊤ = I := by
   apply le_antisymm
   · sorry
   sorry
+
 
 /-
 ## Products of ideals
@@ -198,9 +208,10 @@ def prod_set : Set R :=
 As a first example, let `I` be an ideal of `R`. Consider the product `I * 0`.
 -/
 
-/--
+/-
 As sets, `0 * I ⊆ {0}`.
 -/
+
 lemma prod_set_zero_sub_zero : prod_set 0 I ⊆ {0} := by
   intro z hz
   rcases hz with ⟨ι, hι, a, b, h, hz⟩
@@ -211,9 +222,11 @@ lemma prod_set_zero_sub_zero : prod_set 0 I ⊆ {0} := by
     apply (h i).1
   simpa [this] using hz
 
-/--
+
+/-
 As sets, `{0} ⊆ 0 * I`
 -/
+
 lemma zero_sub_prod_set_zero : {0} ⊆ prod_set 0 I := by
   simp
   use PUnit, inferInstance
@@ -223,9 +236,10 @@ lemma zero_sub_prod_set_zero : {0} ⊆ prod_set 0 I := by
   constructor
   all_goals simp[a, b]
 
-/--
+/-
 As sets, `{0} = 0 * I`
 -/
+
 lemma prod_set_zero_eq_zero : prod_set 0 I = {0} := by
   apply subset_antisymm
   · apply prod_set_zero_sub_zero
@@ -289,7 +303,6 @@ def prod_ideal : Ideal R where
       · sorry
       sorry
     sorry
-
 namespace principal_example
 
 /-
@@ -329,7 +342,6 @@ lemma example_prod_set_sub_principal : prod_set I₁ I₂ ⊆ {6 * r | r : ℤ} 
 
 lemma example_prod_ideal_le_principal : prod_ideal I₁ I₂ ≤ span ℤ {6} := by
   intro x hx
-  simp
   rw [Ideal.mem_span_singleton]
   obtain ⟨r, hr⟩ := example_prod_set_sub_principal hx
   use r
@@ -358,12 +370,9 @@ lemma example_principal_sub_prod_set : {6 * r | r : ℤ} ⊆ prod_set I₁ I₂ 
 
 lemma example_principal_le_prod_ideal : span ℤ {6} ≤ prod_ideal I₁ I₂ := by
   simp
-  intro z hz
-  rw [Ideal.mem_span_singleton] at hz
-  rcases hz with ⟨r, hr⟩
   apply example_principal_sub_prod_set
-  use r
-  simp [hr]
+  use 1
+  simp
 
 /-
 ### Exercise
@@ -382,3 +391,7 @@ lemma example_principal_eq_prod_ideal : span ℤ {6} = prod_ideal I₁ I₂ := b
   apply example_prod_ideal_le_principal
 
 end principal_example
+
+end Mth2010202627.Week10_01
+
+#min_imports

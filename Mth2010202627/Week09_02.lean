@@ -1,10 +1,19 @@
-import Mathlib
-
-namespace Mth2010202627.Week09_02
-
 /-
+Copyright (c) 2026 Gihan Marasingha. All rights reserved.
+Released under Apache 2.0 license as described in the file LICENSE.
+Authors: Gihan Marasingha
+-/
+
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Int.Star
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.SimpleRing.Principal
+
+/-!
 # Formalisation of Coursework 3, MTH2010 2025
 -/
+namespace Mth2010202627.Week09_02
 
 open Function
 
@@ -140,7 +149,7 @@ def vring : Subring K where
   carrier := {x : K | v.f (x : K) ≥ 0}
   mul_mem' := by
     intro a b ha hb
-    simp only [Set.mem_setOf_eq] at * -- Find this from `simp?`
+    simp only [Set.mem_ofPred_eq] at * -- Find this from `simp?`
     rw [v.map_mul]
     exact Left.add_nonneg ha hb -- Find via `apply?`
   one_mem' := by
