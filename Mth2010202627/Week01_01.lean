@@ -46,7 +46,7 @@ where `def` is a keyword, `t` is the name of a term of type `σ` and `x` is an e
 /-- `c1 = (0 1 3)` -/
 def c1 : S 5 := c[0, 1, 3]
 
-/-- `c2 = (2 4)`-/
+/- `c2 = (2 4)`-/
 def c2 : S 5 := c[2, 4]
 
 #eval (c[0, 1, 2] : S 3) * (c[0, 1])
@@ -132,9 +132,14 @@ The following Lean code computes the order of any group element. You need not un
 
 variable {G : Type*} [Group G] [Fintype G] [DecidableEq G]
 
-def OrderOf(g : G) : ℕ :=
-  let L := (List.range (Fintype.card G + 1)).filter (fun n => 0 < n ∧ g ^ n = 1)
-  L.headD 1
+partial def orderOfAux (g : G) (n : ℕ) (x : G) : ℕ :=
+  if x = 1 then
+    n
+  else
+    orderOfAux g (n + 1) (x * g)
+
+def OrderOf (g : G) : ℕ :=
+  orderOfAux g 1 g
 
 /-!
 
@@ -164,7 +169,6 @@ Let's investigate the orders of some elements.
 * Check your answers in the space below by defining cycles in Lean and using
   `OrderOf`
 -/
-
 
 
 
@@ -234,7 +238,7 @@ A group `G` acts on itself by the conjugacy action
 -/
 
 
-variable {G : Type*} [Group G] {M : Type*}  [MulAction G M]
+variable {G : Type*} [Group G] {M : Type*} [MulAction G M]
 
 def conjMulAction : MulAction G G where
   smul := fun g h => g * h * g⁻¹
