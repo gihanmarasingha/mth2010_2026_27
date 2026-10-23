@@ -7,6 +7,7 @@ this repo or visit the links below to open the files directly in Lean 4 Web.
 * [Week 1](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fgihanmarasingha%2Fmth2010_2026_27%2Frefs%2Fheads%2Fmain%2FMth2010202627%2FWeek01_01.lean)
 * [Week 3](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fgihanmarasingha%2Fmth2010_2026_27%2Frefs%2Fheads%2Fmain%2FMth2010202627%2FWeek03_01.lean)
 * [Week 4](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fgihanmarasingha%2Fmth2010_2026_27%2Frefs%2Fheads%2Fmain%2FMth2010202627%2FWeek04_01.lean)
+* [Week 5](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fgihanmarasingha%2Fmth2010_2026_27%2Frefs%2Fheads%2Fmain%2FMth2010202627%2FWeek05_01.lean)
 * [Week 7](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fgihanmarasingha%2Fmth2010_2026_27%2Frefs%2Fheads%2Fmain%2FMth2010202627%2FWeek07_01.lean)
 * [Week 8](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fgihanmarasingha%2Fmth2010_2026_27%2Frefs%2Fheads%2Fmain%2FMth2010202627%2FWeek08_01.lean)
 * [Week 9](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2Fgihanmarasingha%2Fmth2010_2026_27%2Frefs%2Fheads%2Fmain%2FMth2010202627%2FWeek09_01.lean)
